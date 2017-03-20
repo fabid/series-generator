@@ -34,7 +34,7 @@ var data =  seriesGenerator(4)
 
 Returns a generator for data with the given *mean* and *std*.
 
-<a name="_generatePoints" href="#_generatePoints">#</a> <i>generator</i>(<i>start</i>, <i>send</i>, <i>std</i>)
+<a name="_generatePoints" href="#_generatePoints">#</a> <i>generator</i>(<i>start</i>, <i>end</i>, <i>std</i>)
 
 Returns a generator for data with the given *start* and *end* values and standard deviation around the slope *std*.
 
