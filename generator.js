@@ -30,7 +30,7 @@ module.exports = function generator(arg1, arg2, arg3){
   }
 
   const generate = function(nPoints, userSeed) {
-    let seed = userSeed || Math.round(Math.abs(mean || start) * 10 + std * 100 + 1)
+    let seed = getSeed(userSeed)
     let randomWalk = 0
     let data = R.range(0, nPoints).map(function(d, i) {
       randomWalk = randomNormal(seed + 2 * i)
@@ -51,7 +51,9 @@ module.exports = function generator(arg1, arg2, arg3){
       return corrected.map((d, i) => (d - deltaStart) + i * (deltaStart - deltaEnd) / (nPoints - 1))
     }
   }
-
+  const getSeed = function (userSeed){
+    return userSeed || Math.round(Math.abs(mean || start) * 10 + std * 100 + 1)
+  }
   generate.mean = function(value) {
     if (!arguments.length) { return mean }
     mean = value;
