@@ -1,6 +1,6 @@
 {
-  "name": "serie-generator",
-  "version": "0.1.1",
+  "name": "series-generator",
+  "version": "0.1.3",
   "description": "Generator for data series",
   "keywords": [
     "data",
@@ -14,6 +14,7 @@
     "type": "git",
     "url": "https://github.com/fabid/series-generator"
   },
+  "files": ["build"],
   "scripts": {
     "pretest": "",
     "lint": "eslint generator.js",
